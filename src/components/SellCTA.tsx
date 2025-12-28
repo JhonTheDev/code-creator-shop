@@ -45,9 +45,7 @@ const SellCTA = () => {
           </h2>
 
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-12">
-            Aquele projeto de portfólio, o template que você fez para estudar, 
-            ou aquela automação que simplificou seu trabalho — tudo isso pode 
-            se transformar em dinheiro.
+            Aquele projeto de portfólio, o template que você fez para estudar, ou aquela automação que simplificou seu trabalho tudo isso pode se transformar em dinheiro.
           </p>
 
           {/* Benefits Grid */}
@@ -68,7 +66,7 @@ const SellCTA = () => {
 
           {/* CTA */}
           <Button variant="glow" size="lg" className="text-lg px-8">
-            Criar minha loja grátis
+            Anuncie seu código agora
             <ArrowRight className="w-5 h-5 ml-2" />
           </Button>
 

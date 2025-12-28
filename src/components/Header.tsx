@@ -1,7 +1,8 @@
-import { Search, ShoppingCart, Menu, Code2 } from "lucide-react";
+import { Search, ShoppingCart, Menu, Code2, CodeIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
+import { Agent } from "http";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -12,11 +13,8 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <a href="/" className="flex items-center gap-2 group">
-            <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-lg shadow-accent/20 group-hover:shadow-accent/40 transition-shadow">
-              <Code2 className="w-5 h-5 text-foreground" />
-            </div>
             <span className="font-mono font-bold text-lg text-foreground">
-              DevCode<span className="text-accent">.</span>store
+              code<span className="text-accent">Shop</span>
             </span>
           </a>
 

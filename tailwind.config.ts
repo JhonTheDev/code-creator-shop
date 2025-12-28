@@ -1,3 +1,4 @@
+// tailwind.config.ts
 import type { Config } from "tailwindcss";
 
 export default {
@@ -81,6 +82,15 @@ export default {
           from: { opacity: "0", transform: "translateY(20px)" },
           to: { opacity: "1", transform: "translateY(0)" },
         },
+        "button-press": {
+          "0%": { transform: "scale(1)" },
+          "50%": { transform: "scale(0.95)" },
+          "100%": { transform: "scale(1)" },
+        },
+        "shimmer": {
+          "0%": { backgroundPosition: "-200px 0" },
+          "100%": { backgroundPosition: "calc(200px + 100%) 0" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -88,10 +98,29 @@ export default {
         "float": "float 6s ease-in-out infinite",
         "pulse-glow": "pulse-glow 3s ease-in-out infinite",
         "slide-up": "slide-up 0.5s ease-out forwards",
+        "button-press": "button-press 0.2s ease-in-out",
+        "shimmer": "shimmer 2s infinite linear",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "hero-glow": "radial-gradient(ellipse at center, hsl(var(--accent) / 0.15) 0%, transparent 70%)",
+        "button-gradient": "linear-gradient(45deg, hsl(var(--primary)), hsl(var(--accent)))",
+        "button-gradient-hover": "linear-gradient(45deg, hsl(var(--primary) / 0.9), hsl(var(--accent) / 0.9))",
+      },
+      // Classes de estilos para botões
+      boxShadow: {
+        'button': '0 4px 14px 0 rgba(0, 0, 0, 0.1)',
+        'button-hover': '0 6px 20px rgba(0, 0, 0, 0.15)',
+        'button-glow': '0 0 20px hsl(var(--primary) / 0.3)',
+        'button-inner': 'inset 0 2px 4px rgba(255, 255, 255, 0.1)',
+      },
+      // Efeitos de transição personalizados
+      transitionProperty: {
+        'button': 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+      },
+      // Classes utilitárias para botões
+      backgroundSize: {
+        'shimmer': '200px 100%',
       },
     },
   },

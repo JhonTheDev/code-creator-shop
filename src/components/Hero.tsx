@@ -20,20 +20,13 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-8 animate-slide-up">
-            <Sparkles className="w-4 h-4 text-accent" />
-            <span className="text-sm text-muted-foreground">
-              Marketplace exclusivo para desenvolvedores
-            </span>
-          </div>
 
           {/* Heading */}
           <h1 
             className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 animate-slide-up"
             style={{ animationDelay: "0.1s" }}
           >
-            Transforme seu{" "}
+            Transforme seu{"  "}
             <span className="gradient-text">código</span>
             <br />
             em <span className="text-accent glow-text">renda extra</span>
