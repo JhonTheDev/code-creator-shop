@@ -71,3 +71,12 @@ Este documento descreve a implementação de um sistema de popups modular e alta
 /* Exemplo de cores no CSS variables */
 --primary: 222.2 47.4% 11.2%;
 --primary-foreground: 210 40% 98%;
+
+## Dica rápida: gestão concisa de popups
+
+- Centralize exports em `src/components/popup/index.ts`.
+- Cada popup deve aceitar `isOpen: boolean` e `onClose: () => void`.
+- Na página, declare um array `POPUPS` com `{ key, label, Component, props }`.
+- Use `const [openMap, setOpenMap] = useState<Record<string, boolean>>({})` e funções `open(key)`/`close(key)`.
+- Gere botões via `POPUPS.map(...)` e renderize os popups com `<Component isOpen={!!openMap[key]} onClose={() => close(key)} {...props} />`.
+- Resultado: menos boilerplate, fácil manutenção e simples para agentes automatizados descobrirem ou testarem popups.

@@ -5,7 +5,6 @@ export interface PopupProp {
   title?: string;
   description?: string;
   content?: string;
-  showIcon?: boolean;
   showFooter?: boolean;
   textFooter?: string;
   cardTitle1?: string;
@@ -23,7 +22,6 @@ export const PopupModelDefault: PopupProp = {
   title: 'Welcome to CodeShop',
   description: 'Get started with your coding journey today!',
   content: 'Welcome to CodeShop! Your ultimate destination for coding resources.',
-  showIcon: true,
   showFooter: true,
   textFooter: 'Limited time offer • No credit card required',
   showCloseButton: true,
